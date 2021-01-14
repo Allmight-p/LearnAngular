@@ -12,7 +12,7 @@
     function Findvalueforstring(string) {
         var totalvalueofstring = 0;
         for(var i=0;i < string.length;i++){
-            totalvalueofstring = totalvalueofstring + charCodeAt(i);
+            totalvalueofstring = totalvalueofstring + string.charCodeAt(i);
         }
         return totalvalueofstring;
     }
