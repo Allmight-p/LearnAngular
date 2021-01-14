@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app="NameCalc">
   <head>
     <meta charset="utf-8">
     <title>Allmight Angular js</title>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body>
+  <body ng-controller="NameCalcCont">
     <h1>Name Calculator</h1>
+    <div >
     <div>
       Enter ur name here :
-      <input type="text">
+      <input type="text" ng-model="name" ng-keyup="Detectnoofstring();">
     </div>
     <div>
     </br>
-      The number of values in the name entered is :
+      The number of values in the name entered is : {{totalvalue}}
     </div>
+  </div>
+    {{name}}
   </body>
 
 </html>
