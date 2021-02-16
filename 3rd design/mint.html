@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="Shoppinglistapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <script src = "angular.min.js"></script>
+  <script src="mint.js"></script>
+  <body>
+    <h1>List of values</h1>
+    <div ng-controller="appcontroller as itemadder">
+    <input type="text" ng-model="itemadder.itemname">
+    <button type="button" ng-click="itemadder.additem();">click here to add</button>
+  </div>
+  <div ng-controller="displaycontroller as showthelist">
+    <ul>
+      <li ng-repeat="item in showthelist.items">{{ item.name }}</li>
+    </ul>
+      </div>
+  </body>
+</html>
