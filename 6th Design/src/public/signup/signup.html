@@ -40,7 +40,11 @@
         </div>
         </div>
     <label for="validationCustom02" class="form-label">Favorite dish menu number</label>
-    <input type="text" class="form-control" style="width: 400px;" ng-model="signupctrl.favdish" id="validationCustom02" required>
+    <br>
+    <!-- <input type="text" class="form-control" style="width: 400px;" ng-model="signupctrl.favdish" id="validationCustom02" required> -->
+    <select class="" name="" style="color : black; width: 400px;"  ng-model = "signupctrl.favdish">
+      <option ng-repeat = "shrtnames in signupctrl.favcategories">{{shrtnames.short_name}} - {{shrtnames.name}}</option>
+    </select>
     <br>
     <button type="button" ng-disabled = "regform.$invalid" ng-click = "signupctrl.savedetails()" class="btn btn-warning">SignUp</button>
     <span ng-show="signupctrl.result">{{signupctrl.result}}</span>

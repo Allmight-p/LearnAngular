@@ -26,6 +26,12 @@ function MenuService($http, ApiPath) {
     });
   };
 
+  service.getitemcategories = function () {
+    return $http.get(ApiPath + '/categories.json').then(function (response) {
+      return response.data;
+    });
+  }
+
 }
 
 
